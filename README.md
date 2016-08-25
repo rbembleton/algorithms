@@ -1,8 +1,8 @@
-[RB-Sort][rbsort]
+[rbsort][rbsort]
 
-[RB-Sort]: rbsort/README.md
+[rbsort]: rbsort/
 
 
 [eight_queens][eight_queens]
 
-[eight_queens]: eight_queens/README.md
+[eight_queens]: eight_queens/
