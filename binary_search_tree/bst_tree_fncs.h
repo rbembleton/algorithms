@@ -1,17 +1,20 @@
 #include <stdio.h>
 
-void clearTree (BSTNode *pNode);
+void clearTree (BSTNode *pNode, int show);
 void insert (BSTNode *pNode, int val);
 void show (BSTNode *pNode);
+BSTNode * searchTree (BSTNode *pNode, int val);
 
-void clearTree (BSTNode *pNode) {
+void clearTree (BSTNode *pNode, int show) {
   if ((*pNode).left != NULL) {
-    clearTree((*pNode).left);
+    clearTree((*pNode).left, show);
   }
   if ((*pNode).right != NULL) {
-    clearTree((*pNode).right);
+    clearTree((*pNode).right, show);
   }
-  printf("free %d\n", (*pNode).value ? (*pNode).value : 0);
+  if (show == 1) {
+    printf("free %d\n", (*pNode).value ? (*pNode).value : 0);
+  }
   free(pNode);
   return;
 }
@@ -41,4 +44,23 @@ void show (BSTNode *pNode) {
   printf("%d\n", pNode -> value );
   if (pNode -> right != NULL) { show(pNode -> right); }
   return;
+};
+
+BSTNode * searchTree (BSTNode *pNode, int val) {
+  if (pNode -> value == val) {
+    return pNode;
+  } else if (pNode -> value > val) {
+    if (pNode -> left != NULL) {
+      return searchTree (pNode -> left, val);
+    } else {
+      return NULL;
+    }
+  } else if (pNode -> value < val) {
+    if (pNode -> right != NULL) {
+      return searchTree (pNode -> right, val);
+    } else {
+      return NULL;
+    }
+  }
+  return NULL;
 };
