@@ -7,6 +7,9 @@
 #include "bst_tree_fncs.h"
 #include "bst_visualize.h"
 
+// TO RUN: ./bst
+// TO COMPILE: gcc -o bst bst_node.c bst_tree_fncs.c bst_visualize.c bst.c
+
 void createRandomTree (BSTNode *pNode, int treeSize);
 
 int main (void) {

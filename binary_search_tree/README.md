@@ -4,6 +4,10 @@ Binary Search Tree in C. Uses malloc() to create nodes with appropriate memory a
 
 Has a visualization function to view the tree.
 
+TO RUN (currently generating random tree with nodes 0-32): ```./bst```
+
+TO COMPILE: ```gcc -o bst bst_node.c bst_tree_fncs.c bst_visualize.c bst.c```
+
 ## Screenshots:
 
 ![visualization](docs/visualization.png)

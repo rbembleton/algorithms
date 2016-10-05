@@ -1,4 +1,5 @@
-#include <stdio.h>
+#ifndef _BSTNODE_H_
+#define _BSTNODE_H_
 
 typedef struct BSTNode {
   int value;
@@ -8,15 +9,4 @@ typedef struct BSTNode {
 
 BSTNode * createNode (int val);
 
-BSTNode * createNode (int val) {
-  BSTNode *newNode;
-  newNode = (BSTNode *)malloc(sizeof(BSTNode));
-  if (newNode == NULL) {
-    printf("Not enough memory\n");
-    exit(0);
-  }
-  (*newNode).value = val;
-  (*newNode).left = NULL;
-  (*newNode).right = NULL;
-  return newNode;
-};
+#endif
