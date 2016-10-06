@@ -12,5 +12,6 @@ BSTNode * createNode (int val) {
   (*newNode).value = val;
   (*newNode).left = NULL;
   (*newNode).right = NULL;
+  (*newNode).parent = NULL;
   return newNode;
 };

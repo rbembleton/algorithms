@@ -13,10 +13,17 @@
 void createRandomTree (BSTNode *pNode, int treeSize);
 
 int main (void) {
-  BSTNode *rootNodeP = createNode(16);
-  createRandomTree(rootNodeP, 32);
+  BSTNode *rootNodeP = createNode(10);
+  createRandomTree(rootNodeP, 21);
 
   visualizeTree(rootNodeP);
+  delete(rootNodeP, 15);
+  visualizeTree(rootNodeP);
+  delete(rootNodeP, 10);
+  visualizeTree(rootNodeP);
+  delete(rootNodeP, 16);
+  visualizeTree(rootNodeP);
+
 
   clearTree(rootNodeP, 0);
 

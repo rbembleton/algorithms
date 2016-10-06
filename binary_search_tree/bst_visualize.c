@@ -19,23 +19,6 @@ void visualizeTree (BSTNode *pNode) {
   return;
 };
 
-int treeDepth (BSTNode *pNode) {
-  if (pNode -> left || pNode -> right) {
-    if (pNode -> left && pNode -> right) {
-      int leftDepth = treeDepth(pNode -> left) + 1;
-      int rightDepth = treeDepth(pNode -> right) + 1;
-      return leftDepth > rightDepth ? leftDepth : rightDepth;
-    } else if (pNode -> left) {
-      return treeDepth(pNode -> left) + 1;
-    } else if (pNode -> right) {
-      return treeDepth(pNode -> right) + 1;
-    }
-  } else {
-    return 1;
-  }
-  return 0;
-};
-
 void printLineRow (BSTNode *pNode, int row, int spaces) {
   if (row == 1) {
     if (pNode != NULL) {
