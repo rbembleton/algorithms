@@ -84,3 +84,14 @@ void show (DynamicArray *dynArr) {
   }
   printf("]\n");
 };
+
+DynamicArray * concat (DynamicArray *firstArr, DynamicArray *secondArr) {
+  DynamicArray * newArr = newDynamicArray();
+  for (int i = 0; i < firstArr -> length; i++) {
+    push(newArr, valAt(firstArr, i));
+  }
+  for (int i = 0; i < secondArr -> length; i++) {
+    push(newArr, valAt(secondArr, i));
+  }
+  return newArr;
+};

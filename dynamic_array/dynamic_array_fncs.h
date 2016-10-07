@@ -13,5 +13,6 @@ void show (DynamicArray *dynArr);
 int pop (DynamicArray *dynArr);
 int valAt (DynamicArray *dynArr, int pos);
 void doubleSize (DynamicArray *dynArr);
+DynamicArray * concat (DynamicArray *firstArr, DynamicArray *secondArr);
 
 #endif

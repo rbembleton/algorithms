@@ -8,38 +8,20 @@
 int main (void) {
 
   // Tests
-  DynamicArray * myArrPtr = newDynamicArray();
-  push(myArrPtr, 4);
-  push(myArrPtr, 3);
-  show(myArrPtr);
-  push(myArrPtr, 5);
-  show(myArrPtr);
-  push(myArrPtr, 6);
-  show(myArrPtr);
-  push(myArrPtr, 7);
-  show(myArrPtr);
-  push(myArrPtr, 8);
-  show(myArrPtr);
-  push(myArrPtr, 9);
-  show(myArrPtr);
-  push(myArrPtr, 11);
-  show(myArrPtr);
-  push(myArrPtr, 100);
-  show(myArrPtr);
-  printf("pop %d\n", pop(myArrPtr));
-  printf("pop %d\n", pop(myArrPtr));
-  push(myArrPtr, 2);
-  show(myArrPtr);
-  printf("Length: %d\n", myArrPtr -> length );
+  DynamicArray * myFirstArrPtr = newDynamicArray();
+  push(myFirstArrPtr, 4);
+  push(myFirstArrPtr, 3);
+  push(myFirstArrPtr, 5);
+  push(myFirstArrPtr, 6);
+  show(myFirstArrPtr);
 
-  printf("[4] %d\n", valAt(myArrPtr, 4) );
-  printf("[0] %d\n", valAt(myArrPtr, 0) );
-  printf("[-2] %d\n", valAt(myArrPtr, -2) );
-  printf("[-3] %d\n", valAt(myArrPtr, -3) );
-  printf("[-1] %d\n", valAt(myArrPtr, -1) );
-  printf("[-8] %d\n", valAt(myArrPtr, -8) );
-  printf("[-7] %d\n", valAt(myArrPtr, -7) );
-  printf("[-9] %d\n", valAt(myArrPtr, -9) );
+  DynamicArray * mySecondArrPtr = newDynamicArray();
+  push(mySecondArrPtr, 2);
+  push(mySecondArrPtr, 1);
+  show(mySecondArrPtr);
+
+  DynamicArray * myConcatArrPtr = concat(myFirstArrPtr, mySecondArrPtr);
+  show(myConcatArrPtr);
 
   return 0;
 };
