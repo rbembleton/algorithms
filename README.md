@@ -23,3 +23,11 @@ Implementation of binary search tree in C with a visualization.
 [binary_search_tree][binary_search_tree]
 
 [binary_search_tree]: binary_search_tree/
+
+## Dynamic Array
+
+Implementation of a dynamic array in C.
+
+[dynamic_array][dynamic_array]
+
+[dynamic_array]: dynamic_array/
